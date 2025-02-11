@@ -28,7 +28,7 @@ QuickNotes is a simple note-taking application built with Node.js, Express, Mong
 1. Clone the repository:
    ```sh
    git clone https://github.com/zedd1721/QuickNotes.git
-   cd keepnotes
+   cd QuickNotes
    ```
 
 2. Install dependencies:
@@ -257,7 +257,4 @@ QuickNotes is a simple note-taking application built with Node.js, Express, Mong
 - **MONGO_DB:** Your MongoDB connection string.
 - **JWT:** Your JWT secret key.
 
-## License
 
-This project is licensed under the MIT License.
-```

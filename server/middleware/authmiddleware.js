@@ -5,11 +5,11 @@ async function authMiddleware(req, res, next) {
     //Checking token is sent in header "Authorization"
     if(req.headers.authorization && req.headers.authorization.startsWith("Bearer")){
         try{
-            token = req.headers.authorization.splits(" ")[1]; //"Bearer 6565445654gdfhgj5h64t" Extrating only token
+            token = req.headers.authorization.split(" ")[1]; //"Bearer 6565445654gdfhgj5h64t" Extrating only token
 
-            const user = await jwt.verify(token, process.env.JWT) //VErifying token
+            const decoded =  jwt.verify(token, process.env.JWT) //VErifying token
 
-            req.user = await userModel.findById(user._id).select("-password"); //Attaching user
+            req.user = await userModel.findById(decoded.id).select("-password"); //Attaching user
 
             next();
     

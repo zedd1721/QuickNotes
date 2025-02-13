@@ -90,6 +90,6 @@ module.exports.deleteNote = async function (req, res) {
   } catch (err) {
     return res
       .status(500)
-      .json({ message: `Something went wrong while updating, ${err.message}` });
+      .json({ message: `Something went wrong while deleting, ${err.message}` });
   }
 };
